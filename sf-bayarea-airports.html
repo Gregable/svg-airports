@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>San Francisco Bay Area Airports</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 40px; 40px;
+  grid-template-columns: auto auto auto auto;
+}
+body {
+  font-size: 2.2em;
+}
+span.airport {
+  background-color: yellow;
+  font-weight: bold;
+}
+.alert {
+  font-size: 0.8em;
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="alert">
+  <span class="closebtn"
+	onclick="this.parentElement.style.display='none';">&times;</span> 
+  Use at your own risk. Author not responsible for incorrect or out of date
+  information.
+</div>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <span class=airport>Palo Alto (KPAO)</span><br>
+    ATIS: 135.275<br>
+    Tower/CTAF: 118.6<br>
+    Ground: 125.0<br>
+    Elev: 7 ft<br>
+    TPA: 1000W &amp; 800E<br>
+    Rwy 13 (L) / 31 (R)<br>
+
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=2443 true-heading=142>
+        <runway-id name=13 pattern=left></runway-id>
+        <runway-id name=31 pattern=right></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+  <div class="grid-item">
+    <span class=airport>San Carlos (KSQL)</span><br>
+    ATIS: 125.9<br>
+    Tower/CTAF: 119.0<br>
+    Ground: 121.6<br>
+    Elev: 5 ft<br>
+    Rwy 12 (L) / 30 (R)<br>
+    Calm Wind Rwy 12<br>
+
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=2621 true-heading=138>
+        <runway-id name=12 pattern=left></runway-id>
+        <runway-id name=30 pattern=right></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+  <div class="grid-item">
+    <span class=airport>Tracy (KTCY)</span><br>
+    AWOS: 118.375<br>
+    CTAF: 123.075<br>
+    Elev: 193 ft<br>
+    TPA: 993 ft<br>
+    Rwy 12 (L) / 30 (L)<br>
+    Rwy 8 (L) / 26 (L)<br>
+
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=4001 true-heading=132>
+        <runway-id name=12 pattern=left></runway-id>
+        <runway-id name=30 pattern=left></runway-id>
+      </airport-runway>
+      <airport-runway length-ft=3438 true-heading=090
+	              offset-angle=0 offset-x=0 offset-y=700>
+        <runway-id name=8 pattern=left></runway-id>
+        <runway-id name=26 pattern=left></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+
+  <div class="grid-item">
+    <span class=airport>Byron (C83)</span><br>
+    AWOS: 123.775<br>
+    CTAF: 123.05<br>
+    Elev: 78 ft<br>
+    Calm Rwy 30<br>
+    Rwy 12 (L) / 30 (R)<br>
+    Rwy 5 (R) / 23 (L)<br>
+
+    <airport-diagram width=200 height=250>
+      <airport-runway length-ft=4500 true-heading=135
+	              offset-angle=0 offset-x=0 offset-y=1400>
+        <runway-id name=12 pattern=left></runway-id>
+        <runway-id name=30 pattern=right></runway-id>
+      </airport-runway>
+      <airport-runway length-ft=3000 true-heading=063
+	              offset-angle=0 offset-x=0 offset-y=-2600>
+        <runway-id name=5 pattern=right></runway-id>
+        <runway-id name=23 pattern=left></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+
+  <div class="grid-item">
+    <span class=airport>Livermore (KLVK)</span><br>
+    ATIS: 119.65<br>
+    Tower/CTAF: 118.1<br>
+    Ground: 121.6<br>
+    Elev: 399 ft<br>
+    TPA: 1400 ft<br>
+    Rwy 7L (L) / 25R (R)<br>
+    Rwy 7R (R) / 25L (L)<br>
+
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=5253 true-heading=090
+	              offset-angle=0 offset-x=0 offset-y=100>
+        <runway-id name=7L pattern=left></runway-id>
+        <runway-id name=25R pattern=right></runway-id>
+      </airport-runway>
+      <airport-runway length-ft=2699 true-heading=090
+	              offset-angle=0 offset-x=0 offset-y=-1000>
+        <runway-id name=7R pattern=right></runway-id>
+        <runway-id name=25L pattern=left></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+
+   <div class="grid-item">
+    <span class=airport>New Jerusalem (1Q4)</span><br>
+    AWOS@TCY: 118.375<br>
+    CTAF: 122.9<br>
+    Elev: 62 ft<br>
+    Rwy 12 (L) / 30 (L)<br>
+
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=3530 true-heading=138>
+        <runway-id name=12 pattern=left></runway-id>
+        <runway-id name=30 pattern=left></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+
+  <div class="grid-item">
+    <span class=airport>Hayward (KHWD)</span><br>
+    ATIS: 126.7<br>
+    Tower/CTAF: 120.2<br>
+    Ground: 121.4<br>
+    Elev: 52 ft<br>
+    Rwy 10R (R) / 28L (L)<br>
+    Rwy 10L (L) / 28R (R)<br>
+
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=3107 true-heading=119
+	              offset-angle=29 offset-x=300 offset-y=1000>
+        <runway-id name=10L pattern=left></runway-id>
+        <runway-id name=28R pattern=right></runway-id>
+      </airport-runway>
+      <airport-runway length-ft=5694 true-heading=119
+	              offset-angle=29 offset-x=300 offset-y=-1000>
+        <runway-id name=10R pattern=right></runway-id>
+        <runway-id name=28L pattern=left></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+
+  <div class="grid-item">
+    <span class=airport>Reid-Hillview (KRHV)</span><br>
+    ATIS: 125.2<br>
+    Tower/CTAF: 119.8<br>
+    Ground: 121.65<br>
+    Elev: 135 ft<br>
+    Calm Rwy 31R<br>
+    Rwy 13L (L) / 31R (R)<br>
+    Rwy 13R (R) / 31L (L)<br>
+
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=3100 true-heading=143
+	              offset-angle=53 offset-x=0 offset-y=400>
+        <runway-id name=13L pattern=left></runway-id>
+        <runway-id name=31R pattern=right></runway-id>
+      </airport-runway>
+      <airport-runway length-ft=3099 true-heading=143
+                      offset-angle=53 offset-x=0 offset-y=-400>
+        <runway-id name=13R pattern=right></runway-id>
+        <runway-id name=31L pattern=left></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+
+  <div class="grid-item">
+    <span class=airport>San Martin (E16)</span><br>
+    AWOS: 118.350<br>
+    CTAF: 122.7<br>
+    Elev: 283 ft<br>
+    No xwind &lt;1,300 ft<br>
+    Rwy 14 (L) / 32 (R)<br>
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=3095 true-heading=156>
+        <runway-id name=14 pattern=left></runway-id>
+        <runway-id name=32 pattern=left></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+
+  <div class="grid-item">
+    <span class=airport>Half Moon Bay (KHAF)</span><br>
+    AWOS: 127.275<br>
+    CTAF: 122.8<br>
+    Elev: 66 ft<br>
+    Rwy 12 (L) / 30 (R)<br>
+
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=5000 true-heading=138>
+        <runway-id name=12 pattern=left></runway-id>
+        <runway-id name=30 pattern=right></runway-id>
+      </airport-runway>
+    </airport-diagram>
+
+  </div>
+
+  <div class="grid-item">
+    <span class=airport>San Jose (KSJC)</span><br>
+    AWOS: 126.95<br>
+    Tower/CTAF: 124.0<br>
+    Ground: 121.7<br>
+    Elev: 62 ft<br>
+    Rwy 12L (L) / 30R (R)<br>
+    Rwy 12R (R) / 30L (L)<br>
+
+    <airport-diagram width=200 height=200>
+      <airport-runway length-ft=11000 true-heading=139
+	              offset-angle=49 offset-x=300 offset-y=1500>
+        <runway-id name=12L pattern=left></runway-id>
+        <runway-id name=30R pattern=right></runway-id>
+      </airport-runway>
+      <airport-runway length-ft=11000 true-heading=139
+	              offset-angle=49 offset-x=300 offset-y=-1500>
+        <runway-id name=12R pattern=right></runway-id>
+        <runway-id name=30L pattern=left></runway-id>
+      </airport-runway>
+    </airport-diagram>
+  </div>
+</div> 
+      
+<script src=svg-airports-1.0.js async></script>
+
+</body></html>
